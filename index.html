@@ -1,18 +1,33 @@
+html
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>Auto Play Audio</title>
+<title>音声再生ページ</title>
+
+<style>
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+button {
+  font-size: 20px;
+  padding: 12px 24px;
+}
+</style>
+
 </head>
 <body>
-<audio id="player" autoplay>
-  <source src="voice.mp3" type="audio/mpeg">
-</audio>
 
-<script>
-// Chrome Android向け：再生を強制トリガー
-document.getElementById('player').play().catch(()=>{});
-</script>
+<h2>音声を再生するには下のボタンを押してください</h2>
+
+<button onclick="document.getElementById('voice').play()">
+▶ 音声を再生
+</button>
+
+<audio id="voice" src="sample01.mp3"></audio>
 
 </body>
 </html>
